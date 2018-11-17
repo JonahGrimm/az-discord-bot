@@ -1,6 +1,6 @@
+using AZDiscordBot.Discord;
+using AZDiscordBot.Discord.Entities;
 using System;
-using AZDiscordBot.Storage;
-using AZDiscordBot.Storage.Implementations;
 
 namespace AZDiscordBot
 {
@@ -8,7 +8,14 @@ namespace AZDiscordBot
     {
         private static void Main(string[] args)
         {
+            Unity.RegisterTypes();
             Console.WriteLine("Hello World!");
+
+            var discordBotConfig = new AZDiscordBotConfig
+            {
+                Token = "ABC",
+                SocketConfig = SocketConfig.GetDefault()
+            };
         }
     }
 }
