@@ -1,0 +1,30 @@
+using AZDiscordBot.Discord.Entities;
+using Discord;
+using Discord.WebSocket;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AZDiscordBot.Discord
+{
+    public class Connection
+    {
+        private DiscordSocketClient _client;
+        private DiscordLogger _logger;
+
+        public Connection(DiscordLogger logger)
+        {
+            _logger = logger;
+        }
+
+        internal async Task ConnectAsync(AZDiscordBotConfig config)
+        {
+            _client = new DiscordSocketClient(config.SocketConfig);
+
+            _client.Log += _logger.Log;
+
+            // TODO: Continue...
+        }
+    }
+}
