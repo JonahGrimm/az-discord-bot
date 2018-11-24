@@ -8,6 +8,6 @@ namespace AZDiscordBot.Discord.Entities
     public class AZDiscordBotConfig
     {
         public string Token { get; set; }
-        public DiscordSocketConfig SocketConfig { get; set; }
+        //public DiscordSocketConfig SocketConfig { get; set; }
     }
 }
