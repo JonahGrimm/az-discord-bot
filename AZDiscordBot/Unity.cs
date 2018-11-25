@@ -26,7 +26,7 @@ namespace AZDiscordBot
         public static void RegisterTypes()
         {
             _container = new UnityContainer();
-            _container.RegisterSingleton<IDataStorage, InMemoryStorage>();
+            _container.RegisterSingleton<IDataStorage, JsonStorage>();
             _container.RegisterSingleton<ILogger, Logger>();
             _container.RegisterType<DiscordSocketConfig>(new InjectionFactory(i => SocketConfig.GetDefault()));
             _container.RegisterSingleton<DiscordSocketClient>(new InjectionConstructor(typeof(DiscordSocketConfig)));
