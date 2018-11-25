@@ -15,14 +15,6 @@ namespace AZDiscordBot
 
             var storage = Unity.Resolve<IDataStorage>();
 
-            var token = "ABC";
-            storage.StoreObject(token, "Config/BotToken");
-
-            Console.WriteLine("Done");
-
-            Console.ReadKey();
-            return;
-
             var connection = Unity.Resolve<Connection>();
             await connection.ConnectAsync(new AZDiscordBotConfig
             {
