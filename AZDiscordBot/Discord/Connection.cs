@@ -19,14 +19,14 @@ namespace AZDiscordBot.Discord
             _client = client;
         }
 
-        internal async Task ConnectAsync(AZDiscordBotConfig config)
+        public async Task ConnectAsync(AZDiscordBotConfig config)
         {
             _client.Log += _logger.Log;
 
             await _client.LoginAsync(TokenType.Bot, config.Token);
             await _client.StartAsync();
 
-            await Task.Delay(-1);
+            await Task.Delay(1000);
         }
     }
 }

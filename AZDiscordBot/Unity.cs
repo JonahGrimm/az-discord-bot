@@ -23,6 +23,7 @@ namespace AZDiscordBot
             }
         }
 
+        //Ran only once for initialization. 
         public static void RegisterTypes()
         {
             _container = new UnityContainer();
